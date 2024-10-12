@@ -33,6 +33,8 @@
 
 **[更新日志](https://github.com/getgridea/gridea/blob/master/CHANGELOG.md)**  
 
+尝试编译Windows arm 64版本
+
 👏  欢迎使用 **Gridea** ！  
 
 ✍️  **Gridea** 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ... 
