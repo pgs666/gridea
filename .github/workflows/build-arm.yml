@@ -3,10 +3,11 @@ name: Build Gridea for ARM64
 on:
   push:
     branches:
-      - master  # 你可以根据实际情况修改为要监控的分支
+      - main
   pull_request:
     branches:
-      - master
+      - main
+  workflow_dispatch:  # 添加这行以允许手动触发
 
 jobs:
   build:
@@ -34,7 +35,7 @@ jobs:
           npx electron-builder --arm64
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # 将 v2 修改为 v3
         with:
           name: gridea-arm64
           path: dist/
