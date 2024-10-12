@@ -3,10 +3,10 @@ name: Build Gridea for ARM64
 on:
   push:
     branches:
-      - main  # 你可以根据实际情况修改为要监控的分支
+      - master  # 你可以根据实际情况修改为要监控的分支
   pull_request:
     branches:
-      - main
+      - master
 workflow_dispatch:
 jobs:
   build:
