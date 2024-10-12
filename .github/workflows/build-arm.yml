@@ -1,0 +1,40 @@
+name: Build Gridea for ARM64
+
+on:
+  push:
+    branches:
+      - main  # 你可以根据实际情况修改为要监控的分支
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]  # Electron 推荐的 Node.js 版本
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build for ARM64
+        run: |
+          npm run build
+          npx electron-builder --arm64
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: gridea-arm64
+          path: dist/
