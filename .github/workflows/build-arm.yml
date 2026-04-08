@@ -47,6 +47,7 @@ jobs:
           name: gridea-win-arm64
           if-no-files-found: error
           path: |
+            dist_electron/*.exe
             dist_electron/*.zip
             dist_electron/*.yml
             dist_electron/*.blockmap

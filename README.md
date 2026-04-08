@@ -34,6 +34,20 @@ English | [Русский](https://github.com/getgridea/gridea/blob/master/READM
 
 **[CHANGELOG](https://github.com/getgridea/gridea/blob/master/CHANGELOG.md)**
 
+## Fork status / Windows ARM64
+
+This fork tracks `getgridea/gridea:master` and currently keeps a small set of changes focused on making **Windows ARM64** builds work in GitHub Actions and Releases.
+
+Current file-level differences from upstream:
+
+- `.github/workflows/build-arm.yml`: adds a Windows ARM64 GitHub Actions workflow
+- `package.json`: adds `yarn electron:build:win-arm64`
+- `vue.config.js`: disables main-process minification and sets `nsis.buildUniversalInstaller: false` to make `electron-builder` generate ARM64 NSIS installers correctly
+- `src/assets/locales.ts`: fixes a missing trailing comma in `ja_JP`, which blocked CI builds
+- `README.md` / `README-zh_CN.md`: documents this fork's differences from upstream and ARM64 packaging status
+
+Build artifacts for this fork are published from this repository's Actions/Releases instead of upstream releases.
+
 👏  Welcome to use **Gridea**！
 
 ✍️  **Gridea** A static blog writing client. You can use it to record your life, mood, knowledge, notes and ideas...

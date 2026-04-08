@@ -33,7 +33,19 @@
 
 **[更新日志](https://github.com/getgridea/gridea/blob/master/CHANGELOG.md)**  
 
-尝试编译Windows arm 64版本
+## 本 Fork 与上游的差异
+
+这个 fork 以 `getgridea/gridea:master` 为基线，当前保留的修改主要是为了让 **Windows ARM64** 能在 GitHub Actions 中正常构建并发布到本仓库 Releases。
+
+当前相对上游的实际文件级差异如下：
+
+- `.github/workflows/build-arm.yml`：新增 Windows ARM64 的 GitHub Actions 构建流程
+- `package.json`：新增 `yarn electron:build:win-arm64` 构建脚本
+- `vue.config.js`：关闭 main process 压缩，并设置 `nsis.buildUniversalInstaller: false`，用于修复 `electron-builder` 在 ARM64 NSIS 安装包生成时的兼容性问题
+- `src/assets/locales.ts`：修复 `ja_JP` 语言对象末尾缺少逗号导致的 CI 编译失败
+- `README.md` / `README-zh_CN.md`：补充 fork 与上游差异说明，以及 ARM64 打包状态说明
+
+本 fork 的 Windows ARM64 产物会发布在当前仓库的 Actions / Releases 中，而不是上游仓库的 Releases。
 
 👏  欢迎使用 **Gridea** ！  
 
