@@ -50,7 +50,11 @@ jobs:
           $version = (Get-Content package.json | ConvertFrom-Json).version
           $sourceDir = Resolve-Path 'dist_electron\win-arm64-unpacked'
           $outputFile = Join-Path (Resolve-Path 'dist_electron') "Gridea-Setup-$version-arm64.exe"
-          makensis /DAPP_NAME=Gridea /DVERSION=$version /DSOURCE_DIR="$sourceDir" /DOUTPUT_FILE="$outputFile" .github\installers\gridea-arm64-installer.nsi
+          $makensis = Join-Path $env:ProgramFiles 'NSIS\makensis.exe'
+          if (!(Test-Path $makensis)) {
+            $makensis = Join-Path ${env:ProgramFiles(x86)} 'NSIS\makensis.exe'
+          }
+          & $makensis /DAPP_NAME=Gridea /DVERSION=$version /DSOURCE_DIR="$sourceDir" /DOUTPUT_FILE="$outputFile" .github\installers\gridea-arm64-installer.nsi
 
       - name: Upload Windows ARM64 artifacts
         uses: actions/upload-artifact@v4
