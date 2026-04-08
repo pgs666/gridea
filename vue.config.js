@@ -22,6 +22,9 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       nodeIntegration: true,
+      chainWebpackMainProcess: (config) => {
+        config.optimization.minimize(false)
+      },
       builderOptions: {
         productName: 'Gridea',
         win: {
