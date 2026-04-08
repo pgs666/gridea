@@ -39,9 +39,10 @@
 
 当前相对上游的实际文件级差异如下：
 
-- `.github/workflows/build-arm.yml`：新增 Windows ARM64 的 GitHub Actions 构建流程
+- `.github/workflows/build-arm.yml`：新增 Windows ARM64 的 GitHub Actions 构建流程，先构建 ARM64 应用产物，再额外生成可安装的 ARM64 安装包
+- `.github/installers/gridea-arm64-installer.nsi`：新增自定义 NSIS 脚本，用于把 ARM64 应用目录打成可安装的 `.exe`
 - `package.json`：新增 `yarn electron:build:win-arm64` 构建脚本
-- `vue.config.js`：关闭 main process 压缩，并设置 `nsis.buildUniversalInstaller: false`，用于修复 `electron-builder` 在 ARM64 NSIS 安装包生成时的兼容性问题
+- `vue.config.js`：关闭 main process 压缩，用于修复旧版构建链在 Electron 主进程打包时的 Terser 报错
 - `src/assets/locales.ts`：修复 `ja_JP` 语言对象末尾缺少逗号导致的 CI 编译失败
 - `README.md` / `README-zh_CN.md`：补充 fork 与上游差异说明，以及 ARM64 打包状态说明
 

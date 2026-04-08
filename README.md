@@ -40,9 +40,10 @@ This fork tracks `getgridea/gridea:master` and currently keeps a small set of ch
 
 Current file-level differences from upstream:
 
-- `.github/workflows/build-arm.yml`: adds a Windows ARM64 GitHub Actions workflow
+- `.github/workflows/build-arm.yml`: adds a Windows ARM64 GitHub Actions workflow that builds ARM64 app artifacts and then produces a custom ARM64 installer
+- `.github/installers/gridea-arm64-installer.nsi`: adds a custom NSIS installer script used to package the ARM64 app into an installable `.exe`
 - `package.json`: adds `yarn electron:build:win-arm64`
-- `vue.config.js`: disables main-process minification and sets `nsis.buildUniversalInstaller: false` to make `electron-builder` generate ARM64 NSIS installers correctly
+- `vue.config.js`: disables main-process minification to avoid the legacy Terser failure in the Electron main process bundle
 - `src/assets/locales.ts`: fixes a missing trailing comma in `ja_JP`, which blocked CI builds
 - `README.md` / `README-zh_CN.md`: documents this fork's differences from upstream and ARM64 packaging status
 
