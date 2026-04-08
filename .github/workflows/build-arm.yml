@@ -1,41 +1,53 @@
-name: Build Gridea for ARM64
+name: Build Gridea for Windows ARM64
 
 on:
   push:
     branches:
+      - master
       - main
   pull_request:
     branches:
+      - master
       - main
-  workflow_dispatch:  # 添加这行以允许手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  build-windows-arm64:
     runs-on: windows-latest
 
     strategy:
       matrix:
-        node-version: [16.x]  # Electron 推荐的 Node.js 版本
+        node-version:
+          - 16.x
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: yarn
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install --frozen-lockfile
 
-      - name: Build for ARM64
-        run: |
-          npm run build
-          npx electron-builder --arm64
+      - name: Build Windows ARM64 artifacts
+        run: yarn electron:build:win-arm64
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3  # 将 v2 修改为 v3
+      - name: Upload Windows ARM64 artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: gridea-arm64
-          path: dist/
+          name: gridea-win-arm64
+          if-no-files-found: error
+          path: |
+            dist_electron/*.exe
+            dist_electron/*.zip
+            dist_electron/*.yml
+            dist_electron/*.blockmap

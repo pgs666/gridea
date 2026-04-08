@@ -17,6 +17,7 @@
   "repository": "https://github.com/getgridea/gridea",
   "scripts": {
     "electron:build": "vue-cli-service electron:build",
+    "electron:build:win-arm64": "vue-cli-service electron:build --win nsis zip --arm64 --publish never",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "lint": "vue-cli-service lint"
