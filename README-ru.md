@@ -9,18 +9,18 @@
     Клиент для ведения блога
   </h3>
 
-  [Загрузить](https://github.com/getgridea/gridea/releases) | [Официальная страница](https://gridea.dev/)
+  [Загрузить](https://github.com/pgs666/gridea/releases) | [Официальная страница](https://gridea.dev/)
 
-  <a href="https://github.com/getgridea/gridea/releases/latest">
-    <img src="https://img.shields.io/github/release/getgridea/gridea.svg?style=flat-square" alt="">
+  <a href="https://github.com/pgs666/gridea/releases/latest">
+    <img src="https://img.shields.io/github/release/pgs666/gridea.svg?style=flat-square" alt="">
   </a>
 
-  <a href="https://github.com/getgridea/gridea/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/getgridea/gridea.svg?style=flat-square" alt="">
+  <a href="https://github.com/pgs666/gridea/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/pgs666/gridea.svg?style=flat-square" alt="">
   </a>
   
-  <a href="https://github.com/getgridea/gridea/releases/latest">
-    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/getgridea/gridea/total.svg?color=%2312b886&style=flat-square">
+  <a href="https://github.com/pgs666/gridea/releases/latest">
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/pgs666/gridea/total.svg?color=%2312b886&style=flat-square">
   </a>
 
 </div>
@@ -30,9 +30,9 @@
 
 </div>
 
-[English](https://github.com/getgridea/gridea/blob/master/README.md) | Русский | [简体中文](https://github.com/getgridea/gridea/blob/master/README-zh_CN.md)  | [繁體中文](https://github.com/getgridea/gridea/blob/master/README-zh_TW.md)
+[English](https://github.com/pgs666/gridea/blob/master/README.md) | Русский | [简体中文](https://github.com/pgs666/gridea/blob/master/README-zh_CN.md)  | [繁體中文](https://github.com/pgs666/gridea/blob/master/README-zh_TW.md)
 
-**[CHANGELOG](https://github.com/getgridea/gridea/blob/master/CHANGELOG.md)**
+**[CHANGELOG](https://github.com/pgs666/gridea/blob/master/CHANGELOG.md)**
 
 👏  Спасибо, что используете **Gridea**！
 
@@ -71,11 +71,11 @@
 
 
 ## Разработка
-Если вы хотите внести свой вклад в код, пожалуйста, проверьте [Contribution Guide (он правда на китайском)](https://github.com/getgridea/gridea/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97) на всякий случай.
+Если вы хотите внести свой вклад в код, пожалуйста, проверьте [Contribution Guide (он правда на китайском)](https://github.com/pgs666/gridea/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97) на всякий случай.
 
 ``` shell
 $ # Node version > v10.0.0 is requied
-$ git clone https://github.com/getgridea/gridea.git
+$ git clone https://github.com/pgs666/gridea.git
 $ cd gridea
 $ yarn
 $ yarn electron:serve
@@ -94,7 +94,7 @@ $ yarn electron:build
 
 
 ## Участие в разработке
-Мы приветствуем все идеи и улучшения. Вы можете отправлять любые идеи в виде [pull requests](https://github.com/getgridea/gridea/pulls) или как GitHub [issues](https://github.com/getgridea/gridea/issues).   
+Мы приветствуем все идеи и улучшения. Вы можете отправлять любые идеи в виде [pull requests](https://github.com/pgs666/gridea/pulls) или как GitHub [issues](https://github.com/pgs666/gridea/issues).
 
 
 ## Пожертвования разработчикам
@@ -108,4 +108,4 @@ $ yarn electron:build
 
 
 ## Лицензия
-[MIT](https://github.com/getgridea/gridea/blob/master/LICENSE). Copyright (c) 2020-2023 EryouHao
+[MIT](https://github.com/pgs666/gridea/blob/master/LICENSE). Copyright (c) 2020-2023 EryouHao

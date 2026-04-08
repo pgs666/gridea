@@ -9,18 +9,18 @@
     一个静态博客写作客户端
   </h3>
 
-  [下 载](https://github.com/getgridea/gridea/releases) | [主 页](https://gridea.dev/)
+  [下 载](https://github.com/pgs666/gridea/releases) | [主 页](https://gridea.dev/)
 
-  <a href="https://github.com/getgridea/gridea/releases/latest">
-    <img src="https://img.shields.io/github/release/getgridea/gridea.svg?style=flat-square" alt="">
+  <a href="https://github.com/pgs666/gridea/releases/latest">
+    <img src="https://img.shields.io/github/release/pgs666/gridea.svg?style=flat-square" alt="">
   </a>
 
-  <a href="https://github.com/getgridea/gridea/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/getgridea/gridea.svg?style=flat-square" alt="">
+  <a href="https://github.com/pgs666/gridea/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/pgs666/gridea.svg?style=flat-square" alt="">
   </a>
 
-  <a href="https://github.com/getgridea/gridea/releases/latest">
-    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/getgridea/gridea/total.svg?color=%2312b886&style=flat-square">
+  <a href="https://github.com/pgs666/gridea/releases/latest">
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/pgs666/gridea/total.svg?color=%2312b886&style=flat-square">
   </a>
 
 </div>
@@ -29,9 +29,9 @@
   <img src="gridea-app.png">
 </div>
 
-[English](https://github.com/getgridea/gridea/blob/master/README.md) | 简体中文 | [繁體中文](https://github.com/getgridea/gridea/blob/master/README-zh_TW.md)
+[English](https://github.com/pgs666/gridea/blob/master/README.md) | 简体中文 | [繁體中文](https://github.com/pgs666/gridea/blob/master/README-zh_TW.md)
 
-**[更新日志](https://github.com/getgridea/gridea/blob/master/CHANGELOG.md)**  
+**[更新日志](https://github.com/pgs666/gridea/blob/master/CHANGELOG.md)**  
 
 ## 本 Fork 与上游的差异
 
@@ -82,10 +82,10 @@
 😘 Enjoy~
 
 ## 开发
-如果你想贡献代码，请提前参阅[贡献指南](https://github.com/getgridea/gridea/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97)
+如果你想贡献代码，请提前参阅[贡献指南](https://github.com/pgs666/gridea/wiki/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97)
 ``` shell
 $ # Node version > v10.0.0 is requied
-$ git clone https://github.com/getgridea/gridea.git
+$ git clone https://github.com/pgs666/gridea.git
 $ cd gridea
 $ yarn
 $ yarn electron:serve
@@ -101,7 +101,7 @@ $ yarn electron:build
 </div>
 
 ## 贡献
-我们欢迎任何形式的贡献。你可以用 [pull requests](https://github.com/getgridea/gridea/pulls) 或 [issues](https://github.com/getgridea/gridea/issues) 的方式提交任何想法。  
+我们欢迎任何形式的贡献。你可以用 [pull requests](https://github.com/pgs666/gridea/pulls) 或 [issues](https://github.com/pgs666/gridea/issues) 的方式提交任何想法。  
 
 ## 支持
 <div>
@@ -109,4 +109,4 @@ $ yarn electron:build
 </div>
 
 ## License
-[MIT](https://github.com/getgridea/gridea/blob/master/LICENSE). Copyright (c) 2020 EryouHao
+[MIT](https://github.com/pgs666/gridea/blob/master/LICENSE). Copyright (c) 2020 EryouHao
