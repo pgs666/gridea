@@ -24,8 +24,8 @@ InstallDir "$LOCALAPPDATA\Programs\${APP_NAME}"
 InstallDirRegKey HKCU "Software\${APP_NAME}" "InstallDir"
 
 !define MUI_ABORTWARNING
-!define MUI_ICON "public\app-icons\gridea.ico"
-!define MUI_UNICON "public\app-icons\gridea.ico"
+!define MUI_ICON "..\..\public\app-icons\gridea.ico"
+!define MUI_UNICON "..\..\public\app-icons\gridea.ico"
 !define MUI_FINISHPAGE_RUN "$INSTDIR\Gridea.exe"
 
 !insertmacro MUI_PAGE_WELCOME
